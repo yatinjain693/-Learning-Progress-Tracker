@@ -1,0 +1,23 @@
+{
+    "WeeklyGoal": {
+        "target": 53
+    },
+    "Courses": {
+        "Physics": {
+            "Modules": {
+                "Kinematics": "complete",
+                "Dynamics": "pending"
+            }
+        },
+        "Chemistry": {
+            "Modules": {
+                "Atomic Theory": "complete"
+            }
+        },
+        "commerce": {
+            "Modules": {
+                "english": "complete"
+            }
+        }
+    }
+}
