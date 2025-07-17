@@ -1,43 +1,68 @@
-# Learning Progress Tracker
+# 📚 Learning Progress Tracker
 
-## Project Overview
-This is a Python-based Command Line Interface (CLI) tool for managing courses, tracking learning progress, and setting weekly goals. It allows users to add courses and modules, mark modules as complete, view progress, set weekly goals, and track progress against those goals. Data is stored persistently in a JSON file (data.json).
+A simple command-line tool to help you stay on top of your learning goals by tracking courses, modules, and time spent. Whether you're working through tutorials, brushing up on skills, or prepping for interviews—this tracker keeps your progress organized and your motivation fueled.
 
-## Running Instructions
-1. *Prerequisites*:
-   - Python 3.x installed.
-   - A code editor like VS Code.
-   - Git for version control.
+## 🚀 Features
 
-2. *Setup*:
-   - Clone this repository: git clone <your-repo-link>
-   - Navigate to the project folder: cd learning-progress-tracker
-   - Ensure data.json exists (a sample is provided).
+- **Course & Module Management**
+  - Add or delete courses and modules
+  - Mark modules as complete with time spent
+- **Progress Visualization**
+  - Progress bars show module and time completion
+  - Overall learning summary and time tracking
+- **Weekly Goals**
+  - Set custom weekly goals (module count + time)
+  - Track achievement and remaining effort
+- **Reset Progress**
+  - Reset weekly progress to begin fresh each week
 
-3. *Run the Program*:
-   - Execute the script: python tracker.py
-   - Follow the CLI menu to interact with the tool (options 1-7).
+## 🛠️ How It Works
 
-4. *Features*:
-   - Add a new course.
-   - Add a module to an existing course.
-   - Mark a module as complete.
-   - View progress for all courses.
-   - Set a weekly goal (number of modules to complete).
-   - Track progress against the weekly goal.
-   - Save progress and exit.
+Run the script and use the menu-driven interface to interact with the tracker:
 
-## JSON Structure
-The data.json file stores data in the following format:
+```bash
+python tracker.py
+```
+
+Then follow the prompts to:
+- Add or delete courses/modules
+- Complete modules with time spent
+- Set goals and view progress
+
+Progress is stored in a local `data.json` file, so your learning history is saved between sessions.
+
+##  Example Usage
+
+```text
+1. Add Course
+2. Delete Course
+3. Add Module
+...
+10. Exit & Save Progress
+Enter your choice (1–10): 1
+Enter course name: Backend Mastery
+
+
+Progress bar output:
+
+Total Time Spent: 4 hr 30 min
+
+
+## 💾 Data Structure
+
 ```json
 {
   "WeeklyGoal": {
-    "target": <number_of_modules>
+    "target": 50,
+    "time_target": 300
   },
   "Courses": {
-    "<CourseName>": {
+    "Course Name": {
       "Modules": {
-        "<ModuleName>": "<status (complete/pending)>"
+        "Module Name": {
+          "status": "complete",
+          "TimeSpent": 45
+        }
       }
     }
   }
