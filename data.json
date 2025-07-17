@@ -1,23 +1,39 @@
 {
     "WeeklyGoal": {
-        "target": 53
+        "target": 200,
+        "time_target": 600
     },
     "Courses": {
         "Physics": {
             "Modules": {
-                "Kinematics": "complete",
-                "Dynamics": "pending"
+                "Kinematics": {
+                    "status": "complete",
+                    "TimeSpent": 60
+                },
+                "Dynamics": {
+                    "status": "pending",
+                    "TimeSpent": 0
+                }
             }
         },
         "Chemistry": {
             "Modules": {
-                "Atomic Theory": "complete"
+                "Atomic Theory": {
+                    "status": "complete",
+                    "TimeSpent": 45
+                }
             }
         },
         "commerce": {
             "Modules": {
-                "english": "complete"
+                "english": {
+                    "status": "complete",
+                    "TimeSpent": 30
+                }
             }
+        },
+        "pyhsics": {
+            "Modules": {}
         }
     }
 }
